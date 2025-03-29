@@ -1,11 +1,14 @@
 run:
 	docker-compose --project-name development up -d
 
-dev_logs:
+logs:
 	docker-compose --project-name development logs -f
 
 run_production:
 	docker-compose --project-name production -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+logs_production:
+	docker-compose --project-name production -f docker-compose.yml -f docker-compose.prod.yml logs -f
 
 run_test:
 	docker-compose --project-name test -f docker-compose.yml -f docker-compose.test.yml up -d
