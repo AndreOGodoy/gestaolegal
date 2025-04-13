@@ -16,8 +16,8 @@ jobs:
       - name: Setup SSH
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ variables.QA_SSH_HOST }}
-          username: ${{ variables.QA_SSH_USERNAME }}
+          host: ${{ vars.QA_SSH_HOST }}
+          username: ${{ vars.QA_SSH_USERNAME }}
           key: ${{ secrets.QA_SSH_PRIVATE_KEY }}
           port: 22
           script: |
